@@ -3,6 +3,7 @@
      margin:0%;
      padding: 0%;
      box-sizing: border-box;
+     --primary-color:#FF008E;
 }
 body {
     font-family: 'Montserrat';
@@ -43,6 +44,7 @@ nav ul li a {
     height: calc(100vh - 85px);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 500px;
 }
 .banner-left {
     display: flex;
@@ -51,7 +53,7 @@ nav ul li a {
     align-items: flex-start;
 }
 .highlight{
-    color: #FF008E;
+    color: var(--primary-color);
 }
 .banner-left h1 {
     font-size: 45px;
@@ -73,7 +75,7 @@ nav ul li a {
     outline: none;
     border: 0;
     padding: 15px 20px;
-    background-image: linear-gradient(90deg,#8f2a61,#FF008E);
+    background-image: linear-gradient(90deg,#8f2a61,var(--primary-color));
     color: white;
     text-transform: uppercase;
     border-radius: 5px;
@@ -94,7 +96,7 @@ nav ul li a {
 }
 .feature i {
     font-size: 2rem;
-    color: #FF008E;
+    color: var(--primary-color);
 }
 .section-title h2 {
     margin: 40px 0px;
@@ -116,7 +118,7 @@ nav ul li a {
     box-shadow: 0px 30px 35px rgba(0,0,0,.2);
 }
 .card h2  {
-    color: #FF008E;
+    color: var(--primary-color);
     font-size: 25px;
 }
 .card p {
@@ -125,5 +127,100 @@ nav ul li a {
 }
 .card a {
     text-decoration: none;
-    color: #FF008E;
+    color: var(--primary-color);
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #8f2a61;
+}
+.body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+form input{
+    margin: 10px 0px;
+}
+form button {
+    margin: 10px 0px;
+    display: inline-block;
+}
+.contact-left img {
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.text-field{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--primary-color);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.bar > button:hover #nav{
+   display: block !important; 
+}
+@media (max-width:950px) {
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+    .banner h1 {
+        font-size: 35px;
+    }
+}
+.bar{
+    visibility: hidden;
+}
+
+@media (max-width:800px) {
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .feature,.gallery,.body{
+        grid-template-columns: 1fr;
+
+    }
+    .photo{
+        text-align: center;
+    }
+    .photo img{
+        max-width: 350px;
+    }
+    .banner-left{
+        order: 2;
+    }
+    .bar{
+        visibility: visible;
+        position: relative;
+    }
+    
+    .navigation{
+        top:80px;
+        right: 0;
+        flex-direction: column;
+        position: absolute;
+        display: none;
+    }
+  
 }
