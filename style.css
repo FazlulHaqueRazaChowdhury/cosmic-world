@@ -86,3 +86,44 @@ nav ul li a {
     top: 5px;
     border-radius: 0 1px 0 #49072b;
 }
+
+
+.section-title {
+
+    text-align: center;
+}
+.feature i {
+    font-size: 2rem;
+    color: #FF008E;
+}
+.section-title h2 {
+    margin: 40px 0px;
+    font-size: 40px;
+    display: inline-block;
+    border-bottom: 1px solid #922f65;
+    text-transform: uppercase;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    margin: 0px auto;
+    padding: 30px;
+    box-shadow: 0px 30px 35px rgba(0,0,0,.2);
+}
+.card h2  {
+    color: #FF008E;
+    font-size: 25px;
+}
+.card p {
+    margin: 10px 0px;
+    line-height: 1.5;
+}
+.card a {
+    text-decoration: none;
+    color: #FF008E;
+}
